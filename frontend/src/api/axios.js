@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api',
+  baseURL: 'https://recipe-share-1-bqzd.onrender.com/api',
 });
 
 // Attach the saved JWT (if any) to every outgoing request
