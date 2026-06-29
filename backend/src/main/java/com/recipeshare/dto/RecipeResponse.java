@@ -9,12 +9,13 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 public class RecipeResponse {
+
     private Long id;
     private String title;
     private String ingredients;
     private String steps;
     private Integer cookTimeMinutes;
-    private String imageUrl;
+    private String imageName;
     private String authorUsername;
     private LocalDateTime createdAt;
 
@@ -25,7 +26,7 @@ public class RecipeResponse {
                 recipe.getIngredients(),
                 recipe.getSteps(),
                 recipe.getCookTimeMinutes(),
-                recipe.getImageUrl(),
+                recipe.getImageName(),
                 recipe.getUser().getUsername(),
                 recipe.getCreatedAt()
         );

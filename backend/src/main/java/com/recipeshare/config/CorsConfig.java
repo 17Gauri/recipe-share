@@ -13,11 +13,14 @@ public class CorsConfig {
 
     @Bean
     public CorsFilter corsFilter() {
+
         CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowCredentials(true);
 
         config.setAllowedOrigins(List.of(
+                "http://localhost:3000",
+                "http://localhost:5173",
                 "https://recipe-share-2.onrender.com"
         ));
 

@@ -39,6 +39,20 @@ function Login() {
           <button className="btn btn-primary" type="submit">Log in</button>
         </form>
         <p className="form-foot">No account? <Link to="/signup">Sign up</Link></p>
+
+        const res = await api.post('/auth/login', {
+  username,
+  password
+});
+
+console.log("LOGIN RESPONSE:", res.data);
+
+login(res.data.token, res.data.username);
+
+console.log("TOKEN AFTER LOGIN:",
+  localStorage.getItem('token'));
+
+navigate('/');
       </div>
     </div>
   );

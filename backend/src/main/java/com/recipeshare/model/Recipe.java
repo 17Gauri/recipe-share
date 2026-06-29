@@ -31,7 +31,7 @@ public class Recipe {
 
     private Integer cookTimeMinutes;
 
-    private String imageUrl;
+    private String imageName;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
